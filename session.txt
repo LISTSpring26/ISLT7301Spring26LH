@@ -1,0 +1,42 @@
+Script started on 2026-03-04 06:23:55+00:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="111" LINES="39"]
+[?2004h]0;root@ilst-7301-lh: /var/www/htmlroot@ilst-7301-lh:/var/www/html# sudo mysqu[Kl -u root
+[?2004lWelcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 74
+Server version: 8.0.45-0ubuntu0.22.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2026, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> so[9G[Khow databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| ocpacdb            |
+| omekadb            |
+| performance_schema |
+| sys                |
+| wordpress          |
++--------------------+
+7 rows in set (0.01 sec)
+
+mysql> use database c[21G[Kocpacdb
+ERROR 1049 (42000): Unknown database 'database'
+mysql> use ocpacdb
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> \q
+Bye
+[?2004h]0;root@ilst-7301-lh: /var/www/htmlroot@ilst-7301-lh:/var/www/html# [?2004l
+exit
+
+Script done on 2026-03-04 06:25:51+00:00 [COMMAND_EXIT_CODE="0"]
