@@ -1,4 +1,4 @@
-# Problem: Wordpress Link (<IP Address>/library) does not load on browsers 
+# Problem: Wordpress Link (*IP Address*/library) does not load on browsers 
 ## Strategy 1: reconfigure wp-config.php file at /var/www/html/library/wp-config.php by replacing it with wp-config-sample.php in the same directory
   Step 1: backup current wp-config.php file 
   
