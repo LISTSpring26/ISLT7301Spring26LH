@@ -53,7 +53,7 @@ confirm presence of wordpress directory
  
 Rename wordpress directory (If desired)
   
-    sudo mv wordpress library
+    sudo mv (current directory name) library
   
 Follow Step 3 onward exactly from [Burns](https://cseanburns.github.io/systems-librarianship/6a-install-wordpress.html)
 
