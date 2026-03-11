@@ -37,10 +37,6 @@ re-install PHP modules
     
 In your browser, go to the [WordPress Release Archive](https://wordpress.org/download/releases/) and find which release you would like to use. Copy the link to the zip download.
 
-Change to the /var/www/html directory
-
-    cd /var/www/html
-
 Download the desired version of WordPress using the wget command and the URL you just copied from the release archive
 
     sudo wget (Link to zip file)
