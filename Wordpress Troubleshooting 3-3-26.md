@@ -43,6 +43,8 @@ Download the desired version of WordPress using the wget command and the URL you
 
 Unzip the package (the zip file's name will be the part of the copied URL after the last "/", i.e. "wordpress-6.5.4.zip")
 
+    sudo unzip (file name)
+
 check for wordpress directory
 
     ls -a
