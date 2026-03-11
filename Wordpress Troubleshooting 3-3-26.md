@@ -1,29 +1,6 @@
 # Problem: Wordpress Link (*IP Address*/library) does not load on browsers 
-## Strategy 1: reconfigure wp-config.php file at /var/www/html/library/wp-config.php by replacing it with wp-config-sample.php in the same directory
-  Step 1: backup current wp-config.php file 
-  
-      sudo mv wp-config.php wp-config.php.bak
-  
-  Step 2: copy wp-config-sample.php to be the new wp-config.php 
-  
-      sudo cp wp-config-sample.php wp-config.php
-  
-  Step 3: Use Nano to edit the database and user information in the config file
 
-      sudo nano wp-config.php
-  
-  Step 4: 
-  
-      sudo systemctl restart apache2 
-  
-  Step 5:
-  
-      sudo systemctl restart mysql
-  
-  *Result: New error at "*Ipaddress*/library" - "Error establishing a database connection"*
-
-
-## Strategy 2: Complete Reinstall
+## Solution: Remove Wordpress and Reinstall an older version
 ### Step 1: Remove Previous install/database/user
 
 log into MySQL as root
@@ -60,9 +37,17 @@ re-install PHP modules
     
     sudo apt install php-curl php-xml php-imagick php-mbstring php-zip php-intl
     
-latest.zip (wordpress zip file) is still in html directory, so unzip it
-  
-    sudo unzip latest.zip
+In your browser, go to the [WordPress Release Archive](https://wordpress.org/download/releases/) and find which release you would like to use. Copy the link to the zip download.
+
+Change to the /var/www/html directory
+
+    cd /var/www/html
+
+Download the desired version of WordPress using the wget command and the URL you just copied from the release archive
+
+    sudo wget (Link to zip file)
+
+Unzip the package (the zip file's name will be the part of the copied URL after the last "/", i.e. "wordpress-6.5.4.zip")
 
 check for wordpress directory
 
@@ -70,10 +55,9 @@ check for wordpress directory
   
 confirm presence of wordpress directory
  
-Rename wordpress directory
+Rename wordpress directory (If desired)
   
     sudo mv wordpress library
   
 Follow Step 3 onward exactly from [Burns](https://cseanburns.github.io/systems-librarianship/6a-install-wordpress.html)
-  
-Result: Success, Wordpress Site loading on browsers again
+
