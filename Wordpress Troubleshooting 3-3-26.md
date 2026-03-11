@@ -1,11 +1,9 @@
-# Problem: Wordpress Link (*IP Address*/library) does not load on browsers 
-
-## Solution: Remove Wordpress and Reinstall an older version
+# Remove Wordpress and Reinstall an older version
 ### Step 1: Remove Previous install/database/user
 
 log into MySQL as root
     
-    Sudo mysql -u root
+    sudo mysql -u root
     
 delete wordpress user
     
