@@ -20,7 +20,7 @@
   
       sudo systemctl restart mysql
   
-  *Result: New error at "<Ipaddress>/library" - "Error establishing a database connection"*
+  *Result: New error at "*Ipaddress*/library" - "Error establishing a database connection"*
 
 
 ## Strategy 2: Complete Reinstall
